@@ -393,8 +393,8 @@ private function oswaldPawnSellAll():void {
 	if (player.hasPerk(PerkLib.Greedy)) itemValue *= 2;
 	if (player.hasPerk(PerkLib.TravelingMerchantOutfit)) itemValue *= 2;
 	outputText("You lay out all the items you're carrying on the counter in front of Oswald.  He examines them all and nods.  Nervously, he pulls out " + num2Text(itemValue) + " gems and drops them into your waiting hand.");
-	if (player.hasPerk(PerkLib.Greedy) || player.hasPerk(PerkLib.TravelingMerchantOutfit)) outputText("Thanks to a little magic and a lot of hard bargaining you managed to sell your item for double the amount.");
 	if (player.hasPerk(PerkLib.Greedy) && player.hasPerk(PerkLib.TravelingMerchantOutfit)) outputText("Thanks to a little magic and a lot of hard bargaining you managed to sell your item for four times the amount.");
+	else if (player.hasPerk(PerkLib.Greedy) || player.hasPerk(PerkLib.TravelingMerchantOutfit)) outputText("Thanks to a little magic and a lot of hard bargaining you managed to sell your item for double the amount.");
 
 	player.gems += itemValue;
 	statScreenRefresh();

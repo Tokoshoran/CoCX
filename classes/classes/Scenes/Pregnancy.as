@@ -295,7 +295,7 @@ public class Pregnancy extends NPCAwareContent {
                     displayedUpdate = true;
                 }
                 if(player.pregnancyIncubation == 50) {
-                    EngineCore.outputText("\n<b>You're already as big as any pregnant woman back home. Well...for a goblin that is because you are quite smaller than a human to begin with.</b>\n");
+                    EngineCore.outputText("\n<b>You're already as big as any pregnant woman back home. Well...for a goblin that is, because you are quite smaller than a human to begin with.</b>\n");
                     player.dynStats("spe", -1, "lib", .5, "sen", .5, "lus", 4);
                     displayedUpdate = true;
                 }
